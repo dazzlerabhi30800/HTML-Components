@@ -1,0 +1,57 @@
+body{
+    font-family : sans-serif;
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    overflow : hidden;
+}
+
+.intro{
+    display : flex;
+    color : white;
+    height : 100vh;
+    background : linear-gradient(rgba(0,0,0,0.5) , rgba(0,0,0,0.5)),
+     url("https://images.pexels.com/photos/939962/pexels-photo-939962.jpeg?cs=srgb&dl=pexels-argelis-rebolledo-939962.jpg&fm=jpg");
+    background-size : cover;
+    /* justify-content : center;
+    align-items : center; */
+    padding : 28rem 0rem;
+    place-content : center;
+    font-size : 1.5rem;
+}
+
+
+
+.typing {
+    position : relative;
+    margin-left : 10px;
+    transition : all .4s linear;
+    background-image : linear-gradient(270deg, rgb(134, 36, 247) , rgb(22, 36, 240));
+    -webkit-background-clip : text;
+    background-clip : text;
+    -webkit-text-fill-color : transparent;
+    -moz-text-fill-color : transparent;
+    /* text-shadow : 1px 1px 6px rgba(89, 71, 247, 0.603); */
+}
+
+.typing::after{
+    content : "";
+    position : absolute;
+    right : -6px;
+    width : 2px;
+    height : 6%;
+    /* border-right : 2px solid white; */
+    animation : blink 0.5s infinite ease;
+    transition : all .4s ease-in;
+    background : white;
+    z-index : 4;
+}
+
+@keyframes blink{
+    0%{
+        opacity : 0;
+    }
+    100%{
+        opacity : 1;
+    }
+}

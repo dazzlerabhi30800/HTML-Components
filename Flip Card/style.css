@@ -1,0 +1,108 @@
+* {
+  transition : all .3s ease;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  /* background : linear-gradient(to left , rgb(37, 61, 6)rgb(115, 243, 190));*/
+  /* background: linear-gradient(pink, violet); */
+  background: rgb(231,61,14);
+  background: linear-gradient(90deg, rgba(231,61,14,1) 0%, rgba(121,9,58,1) 51%, rgba(24,43,244,1) 100%);
+  overflow-y : hidden;
+}
+
+.card-container {
+  width: 300px;
+  height: 300px;
+  /* background : rgb(248, 88, 88); */
+}
+
+.card figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background : red;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow : 1px 1px 13px 7px rgba(3, 3, 3, 0.247);
+}
+
+.card .front p {
+    padding-right : .4rem;
+    padding-left : .4rem;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card .front {
+
+  background: linear-gradient(to left, rgb(121, 13, 245), rgb(241, 16, 91));
+  color: white;
+  text-align: center;
+  backdrop-filter : blur(5px) contrast(.8);
+  z-index : 444;
+}
+
+.card .back {
+  background: linear-gradient(to left, rgb(241, 97, 181), rgb(247, 84, 98));
+  background-image: linear-gradient(to right top, #f21a78, #f82561, #f83749, #f44a31, #eb5d12);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.back button {
+  background: linear-gradient(to left, rgb(220, 8, 240), rgb(174, 25, 243));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius : 10px;
+  cursor : pointer;
+  position : relative;
+  z-index : 1000;
+  transition : all .4s ease-in;
+}
+.back button span {
+  z-index : 1111;
+}
+.back button:after {
+  position : absolute;
+  content : "";
+  width : 0;
+  height : 100%;
+  left : 0;
+  top : 0;
+  background: linear-gradient(to left, rgb(241, 10, 99), rgb(241, 8, 8));
+  z-index : -1;
+  border-radius : 10px;
+  transition : all .4s ease-in;
+  cursor : pointer;
+}
+.back button:hover:after {
+    width : 100%;
+
+}
+.back button:hover {
+  transform : scale(1.2);
+}
